@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+    <style>
+        body {
+          display: flex; 
+          justify-content: center;
+          align-items: center;
+          min-height: 100vh; 
+        }
+    
+        .container {
+          display: flex;
+          flex-direction: column;
+          gap: 10px; 
+        }
+      </style>
+      
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Number Validation</title>
+    </head>
+<body>
+
+<input type="text" id="userInput" placeholder="Enter a number">
+<button onclick="checkInput()">Check</button>
+
+<script>
+function checkInput() {
+    // Get the input value
+    var input = document.getElementById("userInput").value;
+    
+    // Check if the input is a number
+    if (!isNaN(input)) {
+        // Convert the input to a number
+        var number = parseFloat(input);
+        
+        // Check if the number is lower than 10
+        if (number < 10) {
+            alert("The number is lower than 10");
+        } else {
+            alert("The number is higher than 10");
+        }
+    } else {
+        alert("Please insert a number!");
+    }
+}
+</script>
+
+</body>
+</html>
